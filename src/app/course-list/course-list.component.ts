@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseListItemComponent } from '../course-list-item/course-list-item.component';
+import { Course } from 'models';
 
 @Component({
   selector: 'app-course-list',
@@ -9,4 +10,6 @@ import { CourseListItemComponent } from '../course-list-item/course-list-item.co
   templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css'],
 })
-export class CourseListComponent {}
+export class CourseListComponent {
+  @Input() courses: Course[] = [];
+}
